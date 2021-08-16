@@ -11,8 +11,14 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run format && npm run lint"
+            "pre-commit": "lint-staged"
         }
+    },
+    "lint-staged": {
+        "*.{js,json,css,md}": [
+            "prettier --single-quote --write",
+            "git add"
+        ]
     },
     "keywords": [],
     "author": "",
@@ -26,6 +32,7 @@
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.24.0",
         "eslint-plugin-prettier": "^3.4.0",
+        "eslint-config-airbnb-base": "^14.2.1",
         "husky": "^7.0.1",
         "prettier": "^2.3.2"
     }
