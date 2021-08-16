@@ -1,0 +1,32 @@
+{
+    "name": "task3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "lint": "eslint --fix app.js",
+        "format": "prettier -w ."
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run format && npm run lint"
+        }
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.24.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^7.0.1",
+        "prettier": "^2.3.2"
+    }
+}
