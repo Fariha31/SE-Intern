@@ -4,10 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js",
-        "lint": "eslint --fix app.js",
-        "format": "prettier -w ."
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "husky": {
         "hooks": {
@@ -15,8 +12,8 @@
         }
     },
     "lint-staged": {
-        "*.{js,json,css,md}": [
-            "prettier --single-quote --write",
+        "*.js": [
+            "eslint --fix",
             "git add"
         ]
     },
@@ -33,7 +30,7 @@
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.24.0",
         "eslint-plugin-prettier": "^3.4.0",
-        "husky": "^7.0.1",
+        "husky": "^4.3.8",
         "lint-staged": "^11.1.2",
         "prettier": "^2.3.2"
     }
